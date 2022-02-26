@@ -7,3 +7,8 @@ class Credential:   #Class that generates new instances of credentials
         self.pass_word = pass_word
         self.phone_number = number
         self.email = email
+
+
+#We create a credential_user() method and called it on Credential object to save credentialss into the credential_list using append() method.'''  
+    def save_credential(self):  
+        Credential.credential_list.append(self) 
