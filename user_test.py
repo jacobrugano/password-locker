@@ -37,3 +37,11 @@ class TestUser(unittest.TestCase):
             User.user_list = [] 
             '''in the tearDown() method, we assign the user_list list in the User class as an 
              empty list. This helps us get accurate test results every time a new test case'''
+
+
+# test_save_multiple_user' details to test if we can save multiple users in our users list.
+    def test_save_multiple_users(self):
+            self.new_user.save_user()  
+            test_user = User("Test","user","0711223344","3456788") # code block for the extra new user details
+            test_user.save_user() # saving the extra new user details
+            self.assertEqual(len(User.user_list),2) # to check if the length of our user_list is equal to the number of users saved.
