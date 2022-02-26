@@ -44,3 +44,11 @@ def del_credential(credential):
     Function to delete a credentials
     '''
     credential.delete_credential()
+
+
+# We create a function find_credential that takes in a number and calls the Credentialclass method find_by_number that returns the credentials.
+def find_credential(number):
+    '''
+    Function that finds a credentials by number and returns the credentials
+    '''
+    return Credential.find_by_number(number)
