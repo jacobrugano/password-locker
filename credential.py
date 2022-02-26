@@ -30,3 +30,11 @@ class Credential:   #Class that generates new instances of credentials
         for credential in cls.credential_list:
             if credential.user_name == user_name:
                 return credential
+
+
+    @classmethod             #///////////////2
+    def display_credential(cls):
+        '''
+        method that returns the credentials list
+        '''
+        return cls.credential_list
