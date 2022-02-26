@@ -45,3 +45,11 @@ class TestUser(unittest.TestCase):
             test_user = User("Test","user","0711223344","3456788") # code block for the extra new user details
             test_user.save_user() # saving the extra new user details
             self.assertEqual(len(User.user_list),2) # to check if the length of our user_list is equal to the number of users saved.
+
+#To test if a user can delete his user details from the user_list
+    def test_delete_user(self):
+            self.new_user.save_user()  # saving the new user details
+            test_user = User("Test","user","0712345678","3456788")  # code block for the extra new user details
+            test_user.save_user()
+            self.new_user.delete_user()# Deleting a user object
+            self.assertEqual(len(User.user_list),1)# to check if the length of our user_list is equal to the number of users saved.
