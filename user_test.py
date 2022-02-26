@@ -24,3 +24,9 @@ class TestUser(unittest.TestCase):
         ''' self.assertEqual() this is a TestCase method that checks for an expected result.
               The first argument is the expected result and the second argument is the result that is actually gotten.
              This code block is to check if the name and description of our new object is what we actually inputted. '''
+
+
+#code block to test if the user details has been added using the length method.
+    def test_save_user(self):
+        self.new_user.save_user() # saving the new user
+        self.assertEqual(len(User.user_list),1) #We test this using the length method.
