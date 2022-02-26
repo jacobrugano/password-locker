@@ -61,3 +61,15 @@ class TestUser(unittest.TestCase):
             test_user.save_user()
             found_user = User.find_by_number("0711223344")
             self.assertEqual(found_user.number,test_user.number)
+
+
+# To check if the user details exists once entered
+    def test_user_exists(self): #////
+            '''
+            test to check if we can return a Boolean  if we cannot find the user.
+            '''
+            self.new_user.save_user()
+            test_user = User("Test","user","0711223344","test@user.com") # new user
+            test_user.save_user()
+            user_exists = User.user_exist("0711223344")
+            self.assertTrue(user_exists)
