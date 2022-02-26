@@ -108,13 +108,13 @@ def main():
             elif short_code == 'ca':
                 print ("If you had not logged in to account eg Instagram, Enter the details you wish to be using in the new application:")
                 print("Username:")
-                # user_name = input()
+                input()
                 print("Password:")
-                # pass_word = input()
+                input()
                 print("phone number:")
-                # phone = input()
+                input()
                 print("email:")
-                # email = input()
+                input()
 
                 print("Type  yes  if you would like a generated password?")
                 if input() == "yes":
@@ -154,12 +154,13 @@ def main():
                                     print("Here is a list of all your your various account credentials and their passwords in the application")
 
                                     for credential in display_credential():
-                                            print(f"{credential.user_name} {credential.pass_word} .....{credential.number}  {credential.email}")
+                                            print(f"{credential.user_name} {credential.pass_word} ....{credential.email}")
                                     print("*" * 50)
                             else:
                                     print("*" * 50)
-                                    print("You dont seem to have all account credentials and their passwords to enable saving. Check if you inputted all the fields appropriately")
+                                    print("You dont seem to have inputted all account credentials and their passwords to enable saving. Check if you inputted all the fields appropriately.")
                                     print("*" * 50)
+                                    print("Enter      de       to proceed")
            
 #Funtion to delete a credential's account that the user no longer needs in the applicatio
             elif short_code == "de":
@@ -169,7 +170,7 @@ def main():
                             # print(f"{deleted_name} has been deleted")
                             # if find_credential (deleted_name):
                             #     del_credential = find_credential (deleted_name)
-                            print(f"The credentials {deleted_name} have been deleted")
+                            print(f"The credential {deleted_name} have been deleted")
                             print("*" * 50)
 
             elif short_code == "ex":
