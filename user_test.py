@@ -12,3 +12,15 @@ class TestUser(unittest.TestCase):
         setUp() method allows us to define instructions that will be executed before each test method.
         '''
         self.new_user = User("Jacob","Rugano","0711223344", "3456788") # create user object
+
+
+#Let's write code to check if the User class has been instantiated correctly and the results are as expected.
+    def test_init(self):
+
+        self.assertEqual(self.new_user.first_name,"Jacob")
+        self.assertEqual(self.new_user.last_name,"Rugano")
+        self.assertEqual(self.new_user.phone_number,"0711223344")
+        self.assertEqual(self.new_user.password,"3456788")
+        ''' self.assertEqual() this is a TestCase method that checks for an expected result.
+              The first argument is the expected result and the second argument is the result that is actually gotten.
+             This code block is to check if the name and description of our new object is what we actually inputted. '''
