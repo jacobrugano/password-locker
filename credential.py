@@ -8,17 +8,16 @@ class Credential:   #Class that generates new instances of credentials
         self.phone_number = number
         self.email = email
 
+#We create a delete_credential method that uses the remove() method to delete the credential object from the credential_list.
+    def delete_credential(self):
+        Credential.credential_list.remove(self)
 
 #We create a credential_user() method and called it on Credential object to save credentialss into the credential_list using append() method.'''  
     def save_credential(self):  
         Credential.credential_list.append(self) 
 
-#We create a delete_credential method that uses the remove() method to delete the credential object from the credential_list.
-    def delete_credential(self):
-        Credential.credential_list.remove(self)
 
-
-    @classmethod #///////////////1
+    @classmethod 
     def find_by_user_name(cls,user_name):
         '''
         Method that takes in the username and returns a username that matches that name.
@@ -32,7 +31,7 @@ class Credential:   #Class that generates new instances of credentials
                 return credential
 
 
-    @classmethod             #///////////////2
+    @classmethod             
     def display_credential(cls):
         '''
         method that returns the credentials list
