@@ -19,3 +19,12 @@ def save_user(user):
     Function to save user details
     '''
     user.save_user()
+
+    
+# Creating credentials
+def create_credential(user_name,pass_word,phone,email):
+    '''
+    Function to create a new user credentials
+    '''
+    new_credential = Credential(user_name,pass_word,phone,email)
+    return new_credential
