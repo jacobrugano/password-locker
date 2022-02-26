@@ -60,3 +60,11 @@ def check_existing_credential(number):
     Function that check if credentials exists with that number and return a Boolean
     '''
     return Credential.credential_exist(number)
+
+
+# We then create a function that displays all the credentials a user enters.
+def display_credential():
+    '''
+    Function that returns all the saved contacts
+    '''
+    return Credential.display_credential()
