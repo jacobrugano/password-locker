@@ -20,3 +20,12 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(self.new_credential.user_name,"Jacob")
         self.assertEqual(self.new_credential.pass_word,"3456788")
         self.assertEqual(self.new_credential.phone_number,"0711223344")
+
+        ''' self.assertEqual() this is a TestCase method that checks for an expected result.
+              The first argument is the expected result and the second argument is the result that is actually gotten.
+             This code block is to check if the name and description of our new object is what we actually inputted. '''
+
+#code block to test if the credential details has been added using the length method.
+    def test_save_credential(self):
+        self.new_credential.save_credential() # saving the new credential
+        self.assertEqual(len(Credential.credential_list),1) #We test this using the length method.
