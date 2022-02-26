@@ -46,3 +46,10 @@ class User:   #Class that generates new instances of contacts
             if user.phone_number == number:
                     return True
         return False
+
+    @classmethod
+    def display_users(cls):
+        '''
+        method that returns the contact list
+        '''
+        return cls.user_list
