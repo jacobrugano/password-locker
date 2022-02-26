@@ -30,3 +30,10 @@ class TestUser(unittest.TestCase):
     def test_save_user(self):
         self.new_user.save_user() # saving the new user
         self.assertEqual(len(User.user_list),1) #We test this using the length method.
+
+
+# tearDown method that does clean up after each test case has run. Just like the setUp() method the tearDown() method executes a set of instructions after every test.
+    def tearDown(self):
+            User.user_list = [] 
+            '''in the tearDown() method, we assign the user_list list in the User class as an 
+             empty list. This helps us get accurate test results every time a new test case'''
