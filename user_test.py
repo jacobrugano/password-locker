@@ -73,3 +73,9 @@ class TestUser(unittest.TestCase):
             test_user.save_user()
             user_exists = User.user_exist("0711223344")
             self.assertTrue(user_exists)
+
+    def test_display_all_users(self):
+            '''
+            method that returns a list of all contacts saved
+            '''
+            self.assertEqual(User.display_users(),User.user_list)
